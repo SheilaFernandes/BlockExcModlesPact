@@ -13,6 +13,11 @@ def aumentar(value, increase):
 def diminuir(value, decrease):
     resp = value * (1 - decrease/100)
     return resp
+#outra forma de fazer a função moeda, porém utilizando mais variáveis e pode gerar erros ao precisar realizar contas.
+'''def moeda(value):
+    b = f'{value:.2f}'
+    a = str(b)
+    return f'R${a.replace(".", ",")}'''
 
-def moeda(value):
-    return f'R${value}'
+def moeda(value, moeda='R$'):
+    return f'{moeda}{value:.2f}'.replace('.',',')
